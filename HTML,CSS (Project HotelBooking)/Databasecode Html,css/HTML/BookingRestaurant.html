@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookingRestaurant</title>
+
+    <link rel="stylesheet" href="StyleBookingRestaurant.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+  <!--------------header-------->
+
+  <header class="header" id="navigation-menu">
+    <div class="container">
+        <nav>
+            <a href="#" class="logo"> <img src="picUI/logo.png" alt=""> </a>
+
+            <ul class="nav-menu">
+                <li> <a href="#home" class="nav-link">HOME</a> </li>
+                <li> <a href="#about" class="nav-link">ABOUT</a> </li>
+                <li> <a href="#service" class="nav-link">SERVICE</a> </li>
+                <li> <a href="#restaurant" class="nav-link">RESTAURANT</a> </li>
+                <li> <a href="#gallery" class="nav-link">GALLERY</a> </li>
+                <li> <a href="#contact" class="nav-link">CONTACT</a> </li>
+            </ul>
+            <div class="cart"><img width="auto" height="50" src="picUI/รถเข็ญ.png" class="attachment-full size-full"
+                alt="hotel logo" loading="lazy" srcset="picUI/รถเข็ญ.png 366w"
+                sizes="(max-width: 500px) 200vw, 150px" /></a></div>
+            
+            <div class="hambuger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+              
+
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <!--------------header-------->
+<!--------------book-------------->
+<!--section คือการแบ่งส่วนกัน---->
+<section class="home" id="home">
+    <div class="head_container">
+      <div class="image">
+        <img src="picUI/banner.jpg" class="slide">
+      </div>
+    </div>
+</section>
+
+<section class="book">
+    <section class="book">
+        <div class="container flex">
+          <div class="input grid">
+            <div class="box">
+              <label>Date</label>
+              <input type="date" placeholder="Check-in-Date">
+            </div>
+            <form>
+                <label for="startTime">Time </label>
+                <input type="time" id="startTime">
+              </form>
+            <div class="box">
+              <label>Adults</label> <br>
+              <input type="number" placeholder="0">
+            </div>
+          </div>
+          <div class="search">
+            <input type="submit" value="SEARCH">
+          </div>
+        </div>
+      </section>
+  </section>
+
+  <!--------------book-------->
+<!--------------list room-------->
+
+<div class="content mtop">
+
+            <!--------list room 1-------->
+    <div class="main_box">
+        <h2>Yamazato Dinner 1</h2>
+        <div class="box flex_room">
+            <div class="left">
+                <img src="https://static5-th.orstatic.com/userphoto/Article/0/4I/000W0M50EB955F6CECBAFAj.jpg" alt="spa1">
+            </div>
+            <div class="right grid2 ">
+                <div class="right1">
+                    <h3 class="head_info">Restaurant Information</h>
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="view"> <img src="picture/view.png" alt=""> </a>
+                            <p>銀杏会席 Icho Kaiseki 
+                                前菜、お椀、お造り、焼物、煮物、お食事、お食後
+                                Appetizer, soup, sashimi, grilled dish, simmered dish, rice dish, and dessert 　
+                                 </p>
+                        </li>
+                        <!--<li class="list">
+                            <a class="view"> <img src="picture/size.png" alt=""> </a>
+                            <p>6AT automatic transmission (SkyAtctiv-Drive)</p>
+                        </li>
+                        <li class="list">
+                            <a class="shower"> <img src="picture/bathtub.png" alt=""> </a>
+                            <p> 4 seats</p>
+                        </li>
+                        <li class="list">
+                            <a class="bed"> <img src="picture/bed.png" alt=""> </a>
+                            <p>electrical system</p>
+                        </li>
+                        <li class="list">
+                            <a class="member"> <img src="picture/member.png" alt=""> </a>
+                            <p>Check 5</p>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="right2">
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Breakfast</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Parking</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Coffee & tea</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free WIFI</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Quick check-in</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Fitness Center</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free water in room</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="price">
+                    <!--p class="std_price">THB 8,000.00--</p>-->
+                    <h3 class="pro_price">THB 1,000.00</h3>
+                </div>
+
+                <div class="button_room">
+                    <div class="booking">
+                        <input type="submit" value="BOOKING">
+                    </div>
+                    <div class="add_to_card">
+                        <input type="submit" value="ADD TO CARD">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="end_line"></div>
+    </div>
+
+
+            <!--------list room 2-------->
+    <div class="main_box">
+        <h2>Yamazato Dinner 2</h2>
+        <div class="box flex_room">
+            <div class="left">
+                <img src="https://www.thaipr.net/wp-content/uploads/2021/01/%E0%B9%81%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B3-Otoku-Setto-%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%A1-%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B5%E0%B8%A2%E0%B8%87-169-%E0%B8%9A%E0%B8%B2%E0%B8%97-e1610612285391.jpg" alt="car2">
+            </div>
+            <div class="right grid2 ">
+                <div class="right1">
+                    <h3 class="head_info">Restaurant Information</h3>
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="view"> <img src="picture/view.png" alt=""> </a>
+                            <p>鮨会席 Sushi Kaiseki
+                                前菜、焼物、天ぷら種、握り鮨（8貫、巻き3貫）、お吸い物、お食後
+                                Appetizer, grilled dish, tempura, nigiri sushi (8 pieces and 3 sushi rolls), soup, and dessert</p>
+                        </li>
+                        <!--<li class="list">
+                            <a class="view"> <img src="picture/size.png" alt=""> </a>
+                            <p>45 square meter</p>
+                        </li>
+                        <li class="list">
+                            <a class="shower"> <img src="picture/bathtub.png" alt=""> </a>
+                            <p>Shower & Bathtub</p>
+                        </li>
+                        <li class="list">
+                            <a class="bed"> <img src="picture/bed.png" alt=""> </a>
+                            <p>1 Super King size</p>
+                        </li>
+                        <li class="list">
+                            <a class="member"> <img src="picture/member.png" alt=""> </a>
+                            <p>Max : 2 Adults</p>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="right2">
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Breakfast</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Parking</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Coffee & tea</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free WIFI</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Quick check-in</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Fitness Center</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free water in room</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="price">
+                    <h3 class="pro_price">THB 1,800.00</h3>
+                </div>
+
+                <div class="button_room">
+                    <div class="booking">
+                        <input type="submit" value="BOOKING">
+                    </div>
+                    <div class="add_to_card">
+                        <input type="submit" value="ADD TO CARD">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="end_line"></div>
+    </div>
+
+
+            <!--------list room 3-------->
+            <div class="main_box">
+        <h2>Yamazato Dinner 3</h2>
+        <div class="box flex_room">
+            <div class="left">
+                <img src="https://static5-th.orstatic.com/userphoto/Article/0/46/000TS08F9453B7F1BDBB4Ej.jpg" alt="car3">
+            </div>
+            <div class="right grid2 ">
+                <div class="right1">
+                    <h3 class="head_info">Restaurant Information</h3>
+                    
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="view"> <img src="picture/view.png" alt=""> </a>
+                            <p>和牛陶板焼き会席 Wagyu Toubanyaki Kaiseki
+                                前菜、お造り、蟹サラダ、和牛４等級 (テンダーロイン100gもしくはサーロイン150g)、お食事、お食後
+                                Appetizer, sashimi, salad with crab, wagyu beef A4-grade tenderloin100g or sirloin 150g
+                                rice and miso soup, and dessert</p>
+                        </li>
+                        <!--<li class="list">
+                            <a class="view"> <img src="picture/size.png" alt=""> </a>
+                            <p>45 square meter</p>
+                        </li>
+                        <li class="list">
+                            <a class="shower"> <img src="picture/bathtub.png" alt=""> </a>
+                            <p>Shower & Bathtub</p>
+                        </li>
+                        <li class="list">
+                            <a class="bed"> <img src="picture/bed.png" alt=""> </a>
+                            <p>1 Super King size</p>
+                        </li>
+                        <li class="list">
+                            <a class="member"> <img src="picture/member.png" alt=""> </a>
+                            <p>Max : 2 Adults</p>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="right2">
+                    <ul class="nav_list">
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Breakfast</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Parking</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Coffee & tea</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free WIFI</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Quick check-in</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Fitness Center</p>
+                        </li>
+                        <li class="list">
+                            <a class="check"> <img src="picture/check.png" alt=""> </a>
+                            <p>Free water in room</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="price">
+                    <h3 class="pro_price">THB 4,700.00</h3>
+                </div>
+
+                <div class="button_room">
+                    <div class="booking">
+                        <input type="submit" value="BOOKING">
+                    </div>
+                    <div class="add_to_card">
+                        <input type="submit" value="ADD TO CARD">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="end_line"></div>
+    </div>
+
+        
+    </div>
+
+
+</div>
